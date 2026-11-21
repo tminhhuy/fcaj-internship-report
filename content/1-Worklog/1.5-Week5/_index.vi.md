@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-**Thời gian:** 05/10/2026 – 09/10/2026 &emsp;|&emsp; **Chủ đề:** Bảo mật, định danh và tuân thủ trên AWS
+**Thời gian:** 12/10/2026 – 18/10/2026 &emsp;|&emsp; **Chủ đề:** Bảo mật, định danh và tuân thủ trên AWS
 
 ### Mục tiêu tuần 5:
 

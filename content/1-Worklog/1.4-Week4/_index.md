@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-**Period:** 28/09/2026 – 02/10/2026 &emsp;|&emsp; **Theme:** Amazon S3 storage, CloudFront delivery and Route 53 DNS
+**Period:** 05/10/2026 – 11/10/2026 &emsp;|&emsp; **Theme:** Amazon S3 storage, CloudFront delivery and Route 53 DNS
 
 ### Week 4 Objectives:
 

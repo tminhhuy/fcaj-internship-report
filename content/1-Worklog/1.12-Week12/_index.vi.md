@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
-**Thời gian:** 23/11/2026 – 27/11/2026 &emsp;|&emsp; **Chủ đề:** Triển khai dự án, bảo mật, giám sát và tổng kết thực tập
+**Thời gian:** 30/11/2026 – 06/12/2026 &emsp;|&emsp; **Chủ đề:** Triển khai dự án, bảo mật, giám sát và tổng kết thực tập
 
 ### Mục tiêu tuần 12:
 

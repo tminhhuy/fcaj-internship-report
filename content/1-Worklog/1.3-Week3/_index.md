@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-**Period:** 21/09/2026 – 25/09/2026 &emsp;|&emsp; **Theme:** Compute: Amazon EC2, Auto Scaling and Load Balancing
+**Period:** 28/09/2026 – 04/10/2026 &emsp;|&emsp; **Theme:** Compute: Amazon EC2, Auto Scaling and Load Balancing
 
 ### Week 3 Objectives:
 

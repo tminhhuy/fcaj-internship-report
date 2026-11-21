@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-**Thời gian:** 02/11/2026 – 06/11/2026 &emsp;|&emsp; **Chủ đề:** Hạ tầng dưới dạng code, CI/CD và phân tích yêu cầu dự án
+**Thời gian:** 09/11/2026 – 15/11/2026 &emsp;|&emsp; **Chủ đề:** Hạ tầng dưới dạng code, CI/CD và phân tích yêu cầu dự án
 
 ### Mục tiêu tuần 9:
 

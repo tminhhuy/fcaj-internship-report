@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-**Thời gian:** 09/11/2026 – 13/11/2026 &emsp;|&emsp; **Chủ đề:** Container, phân tích dữ liệu và thử nghiệm OCR hợp đồng
+**Thời gian:** 16/11/2026 – 22/11/2026 &emsp;|&emsp; **Chủ đề:** Container, phân tích dữ liệu và thử nghiệm OCR hợp đồng
 
 ### Mục tiêu tuần 10:
 

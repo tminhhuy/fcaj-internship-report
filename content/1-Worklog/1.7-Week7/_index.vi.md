@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-**Thời gian:** 19/10/2026 – 23/10/2026 &emsp;|&emsp; **Chủ đề:** Giám sát, vận hành hệ thống và ôn tập giữa kỳ
+**Thời gian:** 26/10/2026 – 01/11/2026 &emsp;|&emsp; **Chủ đề:** Giám sát, vận hành hệ thống và ôn tập giữa kỳ
 
 ### Mục tiêu tuần 7:
 

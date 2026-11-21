@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-**Thời gian:** 16/11/2026 – 20/11/2026 &emsp;|&emsp; **Chủ đề:** AWS Well-Architected, Amazon Bedrock và thiết kế kiến trúc dự án
+**Thời gian:** 23/11/2026 – 29/11/2026 &emsp;|&emsp; **Chủ đề:** AWS Well-Architected, Amazon Bedrock và thiết kế kiến trúc dự án
 
 ### Mục tiêu tuần 11:
 

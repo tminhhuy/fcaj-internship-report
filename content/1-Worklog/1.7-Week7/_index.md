@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-**Period:** 19/10/2026 – 23/10/2026 &emsp;|&emsp; **Theme:** Monitoring, operations and mid-term review
+**Period:** 26/10/2026 – 01/11/2026 &emsp;|&emsp; **Theme:** Monitoring, operations and mid-term review
 
 ### Week 7 Objectives:
 

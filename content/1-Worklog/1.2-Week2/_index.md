@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-**Period:** 14/09/2026 – 18/09/2026 &emsp;|&emsp; **Theme:** Networking on AWS with Amazon VPC
+**Period:** 21/09/2026 – 27/09/2026 &emsp;|&emsp; **Theme:** Networking on AWS with Amazon VPC
 
 ### Week 2 Objectives:
 

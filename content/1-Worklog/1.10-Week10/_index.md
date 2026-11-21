@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-**Period:** 09/11/2026 – 13/11/2026 &emsp;|&emsp; **Theme:** Containers, data analytics and contract OCR experiments
+**Period:** 16/11/2026 – 22/11/2026 &emsp;|&emsp; **Theme:** Containers, data analytics and contract OCR experiments
 
 ### Week 10 Objectives:
 

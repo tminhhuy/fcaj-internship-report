@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-**Period:** 26/10/2026 – 30/10/2026 &emsp;|&emsp; **Theme:** Serverless and event-driven architecture; team project kickoff
+**Period:** 02/11/2026 – 08/11/2026 &emsp;|&emsp; **Theme:** Serverless and event-driven architecture; team project kickoff
 
 ### Week 8 Objectives:
 

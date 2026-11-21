@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-**Thời gian:** 12/10/2026 – 16/10/2026 &emsp;|&emsp; **Chủ đề:** Cơ sở dữ liệu trên AWS: RDS, Aurora, DynamoDB và ElastiCache
+**Thời gian:** 19/10/2026 – 25/10/2026 &emsp;|&emsp; **Chủ đề:** Cơ sở dữ liệu trên AWS: RDS, Aurora, DynamoDB và ElastiCache
 
 ### Mục tiêu tuần 6:
 

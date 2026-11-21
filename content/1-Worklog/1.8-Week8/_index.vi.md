@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-**Thời gian:** 26/10/2026 – 30/10/2026 &emsp;|&emsp; **Chủ đề:** Kiến trúc serverless, hướng sự kiện và khởi động dự án nhóm
+**Thời gian:** 02/11/2026 – 08/11/2026 &emsp;|&emsp; **Chủ đề:** Kiến trúc serverless, hướng sự kiện và khởi động dự án nhóm
 
 ### Mục tiêu tuần 8:
 

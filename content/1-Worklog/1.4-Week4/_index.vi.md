@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-**Thời gian:** 28/09/2026 – 02/10/2026 &emsp;|&emsp; **Chủ đề:** Lưu trữ Amazon S3, phân phối nội dung với CloudFront và DNS với Route 53
+**Thời gian:** 05/10/2026 – 11/10/2026 &emsp;|&emsp; **Chủ đề:** Lưu trữ Amazon S3, phân phối nội dung với CloudFront và DNS với Route 53
 
 ### Mục tiêu tuần 4:
 

@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-**Period:** 12/10/2026 – 16/10/2026 &emsp;|&emsp; **Theme:** Databases on AWS: RDS, Aurora, DynamoDB and ElastiCache
+**Period:** 19/10/2026 – 25/10/2026 &emsp;|&emsp; **Theme:** Databases on AWS: RDS, Aurora, DynamoDB and ElastiCache
 
 ### Week 6 Objectives:
 

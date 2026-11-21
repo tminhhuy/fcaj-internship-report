@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-**Thời gian:** 07/09/2026 – 11/09/2026 &emsp;|&emsp; **Chủ đề:** Làm quen FCAJ, nền tảng điện toán đám mây và thiết lập tài khoản AWS an toàn
+**Thời gian:** 14/09/2026 – 20/09/2026 &emsp;|&emsp; **Chủ đề:** Làm quen FCAJ, nền tảng điện toán đám mây và thiết lập tài khoản AWS an toàn
 
 ### Mục tiêu tuần 1:
 

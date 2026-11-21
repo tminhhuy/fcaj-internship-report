@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
-**Period:** 23/11/2026 – 27/11/2026 &emsp;|&emsp; **Theme:** Project implementation, security, monitoring and internship wrap-up
+**Period:** 30/11/2026 – 06/12/2026 &emsp;|&emsp; **Theme:** Project implementation, security, monitoring and internship wrap-up
 
 ### Week 12 Objectives:
 

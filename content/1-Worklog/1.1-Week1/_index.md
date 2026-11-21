@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-**Period:** 07/09/2026 – 11/09/2026 &emsp;|&emsp; **Theme:** Getting started with FCAJ, cloud fundamentals and a secure AWS account
+**Period:** 14/09/2026 – 20/09/2026 &emsp;|&emsp; **Theme:** Getting started with FCAJ, cloud fundamentals and a secure AWS account
 
 ### Week 1 Objectives:
 

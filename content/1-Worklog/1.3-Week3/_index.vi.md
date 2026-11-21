@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-**Thời gian:** 21/09/2026 – 25/09/2026 &emsp;|&emsp; **Chủ đề:** Dịch vụ tính toán: Amazon EC2, Auto Scaling và Load Balancing
+**Thời gian:** 28/09/2026 – 04/10/2026 &emsp;|&emsp; **Chủ đề:** Dịch vụ tính toán: Amazon EC2, Auto Scaling và Load Balancing
 
 ### Mục tiêu tuần 3:
 

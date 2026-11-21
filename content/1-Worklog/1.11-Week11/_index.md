@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-**Period:** 16/11/2026 – 20/11/2026 &emsp;|&emsp; **Theme:** AWS Well-Architected, Amazon Bedrock and project architecture design
+**Period:** 23/11/2026 – 29/11/2026 &emsp;|&emsp; **Theme:** AWS Well-Architected, Amazon Bedrock and project architecture design
 
 ### Week 11 Objectives:
 

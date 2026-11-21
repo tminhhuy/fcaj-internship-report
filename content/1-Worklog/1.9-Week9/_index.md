@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-**Period:** 02/11/2026 – 06/11/2026 &emsp;|&emsp; **Theme:** Infrastructure as Code, CI/CD and project requirements
+**Period:** 09/11/2026 – 15/11/2026 &emsp;|&emsp; **Theme:** Infrastructure as Code, CI/CD and project requirements
 
 ### Week 9 Objectives:
 

@@ -20,18 +20,18 @@ Each week includes objectives, a hands-on architecture diagram, a daily task tab
 
 | Week | Period | Theme | Main services |
 | --- | --- | --- | --- |
-| [Week 1](1.1-week1/) | 07/09/2026 – 11/09/2026 | Getting started with FCAJ, cloud fundamentals and a secure AWS account | IAM, AWS Budgets, AWS Support, AWS CLI |
-| [Week 2](1.2-week2/) | 14/09/2026 – 18/09/2026 | Networking on AWS with Amazon VPC | VPC, Subnet, IGW, NAT Gateway, VPC Peering, Flow Logs |
-| [Week 3](1.3-week3/) | 21/09/2026 – 25/09/2026 | Compute: Amazon EC2, Auto Scaling and Load Balancing | EC2, EBS, IAM Role, ALB, Auto Scaling, Lightsail |
-| [Week 4](1.4-week4/) | 28/09/2026 – 02/10/2026 | Amazon S3 storage, CloudFront delivery and Route 53 DNS | S3, CloudFront, Route 53, ACM, AWS Backup |
-| [Week 5](1.5-week5/) | 05/10/2026 – 09/10/2026 | Security, identity and compliance on AWS | IAM, KMS, Secrets Manager, Cognito, WAF, GuardDuty |
-| [Week 6](1.6-week6/) | 12/10/2026 – 16/10/2026 | Databases on AWS: RDS, Aurora, DynamoDB and ElastiCache | RDS, Aurora, DynamoDB, ElastiCache, DMS |
-| [Week 7](1.7-week7/) | 19/10/2026 – 23/10/2026 | Monitoring, operations and mid-term review | CloudWatch, CloudTrail, AWS Config, Systems Manager |
-| [Week 8](1.8-week8/) | 26/10/2026 – 30/10/2026 | Serverless and event-driven architecture; team project kickoff | Lambda, API Gateway, SQS, SNS, EventBridge, Step Functions |
-| [Week 9](1.9-week9/) | 02/11/2026 – 06/11/2026 | Infrastructure as Code, CI/CD and project requirements | CloudFormation, CDK, CodePipeline, CodeBuild |
-| [Week 10](1.10-week10/) | 09/11/2026 – 13/11/2026 | Containers, data analytics and contract OCR experiments | ECS, Fargate, ECR, Kinesis, Glue, Athena, Textract |
-| [Week 11](1.11-week11/) | 16/11/2026 – 20/11/2026 | AWS Well-Architected, Amazon Bedrock and project architecture design | Well-Architected, Bedrock, Knowledge Bases, Guardrails |
-| [Week 12](1.12-week12/) | 23/11/2026 – 27/11/2026 | Project implementation, security, monitoring and internship wrap-up | CDK, Step Functions, Textract, Bedrock, WAF, CloudWatch |
+| [Week 1](1.1-week1/) | 14/09/2026 – 20/09/2026 | Getting started with FCAJ, cloud fundamentals and a secure AWS account | IAM, AWS Budgets, AWS Support, AWS CLI |
+| [Week 2](1.2-week2/) | 21/09/2026 – 27/09/2026 | Networking on AWS with Amazon VPC | VPC, Subnet, IGW, NAT Gateway, VPC Peering, Flow Logs |
+| [Week 3](1.3-week3/) | 28/09/2026 – 04/10/2026 | Compute: Amazon EC2, Auto Scaling and Load Balancing | EC2, EBS, IAM Role, ALB, Auto Scaling, Lightsail |
+| [Week 4](1.4-week4/) | 05/10/2026 – 09/10/2026 | Amazon S3 storage, CloudFront delivery and Route 53 DNS | S3, CloudFront, Route 53, ACM, AWS Backup |
+| [Week 5](1.5-week5/) | 12/10/2026 – 16/10/2026 | Security, identity and compliance on AWS | IAM, KMS, Secrets Manager, Cognito, WAF, GuardDuty |
+| [Week 6](1.6-week6/) | 19/10/2026 – 23/10/2026 | Databases on AWS: RDS, Aurora, DynamoDB and ElastiCache | RDS, Aurora, DynamoDB, ElastiCache, DMS |
+| [Week 7](1.7-week7/) | 26/10/2026 – 30/10/2026 | Monitoring, operations and mid-term review | CloudWatch, CloudTrail, AWS Config, Systems Manager |
+| [Week 8](1.8-week8/) | 02/11/2026 – 06/11/2026 | Serverless and event-driven architecture; team project kickoff | Lambda, API Gateway, SQS, SNS, EventBridge, Step Functions |
+| [Week 9](1.9-week9/) | 09/11/2026 – 13/11/2026 | Infrastructure as Code, CI/CD and project requirements | CloudFormation, CDK, CodePipeline, CodeBuild |
+| [Week 10](1.10-week10/) | 16/11/2026 – 20/11/2026 | Containers, data analytics and contract OCR experiments | ECS, Fargate, ECR, Kinesis, Glue, Athena, Textract |
+| [Week 11](1.11-week11/) | 23/11/2026 – 27/11/2026 | AWS Well-Architected, Amazon Bedrock and project architecture design | Well-Architected, Bedrock, Knowledge Bases, Guardrails |
+| [Week 12](1.12-week12/) | 30/11/2026 – 06/12/2026 | Project implementation, security, monitoring and internship wrap-up | CDK, Step Functions, Textract, Bedrock, WAF, CloudWatch |
 
 ### Weekly details
 
