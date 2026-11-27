@@ -19,7 +19,7 @@ chapter: false
 
 &emsp; **Ngành:** <Ngành học>An Toàn Thông Tin
 
-&emsp; **Lớp:** <Mã lớp FCAJ>
+&emsp; **Lớp:** <Mã lớp FCAJ>FCAJ - FPT - Season 4
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 

@@ -1,31 +1,37 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-09-07
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# SCA: Smart Contract Analyzer for Everyone on AWS
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+**SCA (Smart Contract Analyzer)** is an AI contract review system that runs entirely on AWS. It has been live at [smartca.app](https://smartca.app) since 25/11/2026. Six agents built on **Amazon Nova Pro** read contracts in Vietnamese, English or both, score them from 0 to 100, and keep a legal citation only when the knowledge base can find that exact article again. The system is advisory only: it never edits a contract, and it replaces personal identifiers with tokens before any AI model reads the text.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+This workshop walks through the whole solution, from the problem and the research behind it to the architecture, the AWS Well-Architected pillars, the cost estimate, deployment, testing, results and clean-up.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+You will see how to:
+
++ Run a **deterministic, event-driven pipeline** with Amazon EventBridge, Amazon SQS and AWS Step Functions, one execution per contract.
++ Protect personal data with **two copies of every contract**: a read-only signed original and a tokenized working copy that must pass a leak check before any agent runs.
++ Ground legal findings with **Amazon Bedrock Knowledge Bases on Amazon S3 Vectors**, then verify every citation a second time before it reaches the report.
++ Keep the processing functions in **private subnets with no Internet access**, calling Amazon Textract and Amazon Bedrock through VPC endpoints (AWS PrivateLink).
++ Deploy everything as code with **AWS CDK**, monitor it with Amazon CloudWatch and estimate the cost with the AWS Pricing Calculator.
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Workshop overview]({{< relref "/5-Workshop/5.1-Overview" >}})
+2. [Context and design principles]({{< relref "/5-Workshop/5.2-Context-and-Principles" >}})
+3. [Features and workflow]({{< relref "/5-Workshop/5.3-Features-and-Workflow" >}})
+4. [Legal retrieval]({{< relref "/5-Workshop/5.4-Legal-Retrieval" >}})
+5. [Architecture on AWS]({{< relref "/5-Workshop/5.5-AWS-Architecture" >}})
+6. [AWS Well-Architected pillars]({{< relref "/5-Workshop/5.6-Well-Architected" >}})
+7. [Deployment and testing]({{< relref "/5-Workshop/5.7-Deployment" >}})
+8. [Results and evaluation]({{< relref "/5-Workshop/5.8-Results-and-Evaluation" >}})
+9. [Lessons learned, risks and roadmap]({{< relref "/5-Workshop/5.9-Lessons-and-Roadmap" >}})
+10. [Clean up]({{< relref "/5-Workshop/5.10-Clean-Up" >}})
+11. [Team and references]({{< relref "/5-Workshop/5.11-Team-and-References" >}})

@@ -1,125 +1,139 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Buổi chia sẻ về Amazon Bedrock"
+date: 2026-09-07
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Bài thu hoạch: "Buổi chia sẻ về Amazon Bedrock cùng các mentor FCAJ"
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Thông tin sự kiện
 
-### Mục Đích Của Sự Kiện
+| Hạng mục | Chi tiết |
+| --- | --- |
+| Sự kiện | Buổi chia sẻ kiến thức Amazon Bedrock |
+| Thời gian | 14/11/2026 |
+| Địa điểm | Văn phòng AWS Việt Nam, Thành phố Hồ Chí Minh |
+| Người chia sẻ | Các mentor FCAJ |
+| Người tham dự | Thực tập sinh FCAJ |
+| Vai trò của em | Người tham dự |
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Mục đích của sự kiện
 
-### Danh Sách Diễn Giả
+- Giới thiệu Amazon Bedrock và cách xây dựng ứng dụng AI tạo sinh trên AWS.
+- Hướng dẫn chọn và gọi foundation model an toàn, kiểm soát được chi phí.
+- Giải thích RAG (retrieval-augmented generation) với Knowledge Bases, Guardrails và agent.
+- Tạo cơ hội để các nhóm thực tập trình bày kiến trúc dự án và nhận góp ý.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Nội dung nổi bật
 
-### Nội Dung Nổi Bật
+#### 1. Amazon Bedrock là gì
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+- Dịch vụ managed, serverless: một API để dùng nhiều foundation model của Amazon (Amazon Nova) và các nhà cung cấp khác (Anthropic, Meta, Mistral AI, Cohere…).
+- Trả tiền theo token (on-demand), hoặc dùng batch inference và provisioned throughput cho khối lượng lớn, ổn định.
+- Prompt và kết quả không được dùng để huấn luyện model và không chia sẻ cho nhà cung cấp model.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### 2. Chọn model
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+- So sánh chất lượng, độ trễ, giá mỗi 1 triệu token vào/ra, cửa sổ ngữ cảnh, loại đầu vào (văn bản, ảnh, tài liệu) và khả năng tool use.
+- Đọc model card để biết Region và kiểu inference: một số model chỉ có qua **cross-Region inference profile** (ví dụ profile APAC), chuyển request giữa các Region trong cùng khu vực địa lý.
+- Xin quyền model và kiểm tra quota ngay từ đầu dự án, không để đến cuối.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### 3. Gọi model bằng Converse API
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+- Một định dạng request cho mọi model: system prompt, messages, tham số suy luận (temperature, số token tối đa) và tool.
+- **Tool use** cho phép model trả JSON mà chương trình kiểm tra được, thay vì văn bản tự do.
+- **Prompt caching** dùng lại phần ngữ cảnh dài, lặp lại (system prompt, tài liệu) để giảm chi phí và độ trễ.
+- Streaming (ConverseStream) phù hợp giao diện dạng chat.
 
-#### Domain-Driven Design (DDD)
+#### 4. RAG với Knowledge Bases
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- Tài liệu trên S3 → chia đoạn (chunking) → embedding → vector store như Amazon OpenSearch Serverless, Amazon S3 Vectors hoặc Aurora PostgreSQL.
+- `Retrieve` trả về các đoạn văn bản; `RetrieveAndGenerate` trả về câu trả lời kèm trích dẫn.
+- Bộ lọc metadata thu hẹp phạm vi tìm kiếm (ví dụ theo quốc gia hoặc trạng thái hiệu lực của văn bản).
+- Tri thức nằm ngoài model, nên cập nhật chỉ cần nạp tệp mới, không phải fine-tune.
 
-#### Event-Driven Architecture
+#### 5. Guardrails
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+- Bộ lọc nội dung, chủ đề bị cấm, lọc từ ngữ, lọc thông tin nhạy cảm (chặn hoặc che dữ liệu cá nhân, regex tự định nghĩa), bộ lọc prompt attack và kiểm tra contextual grounding.
+- Guardrails dùng được với mọi model; API `ApplyGuardrail` kiểm tra văn bản mà không cần gọi model.
 
-#### Compute Evolution
+#### 6. Agent
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+- Amazon Bedrock Agents và Amazon Bedrock AgentCore để chạy agent trên AWS; các framework mã nguồn mở như Strands Agents để viết agent bằng code.
+- Đánh đổi: agent tự trị linh hoạt hơn, còn luồng xử lý cố định (ví dụ AWS Step Functions) dễ kiểm thử, kiểm toán và kiểm soát chi phí hơn.
 
-#### Amazon Q Developer
+#### 7. Bảo mật, vận hành và chi phí
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+- IAM quyền tối thiểu: chỉ cho `bedrock:InvokeModel` trên đúng ARN của model hoặc inference profile cần dùng.
+- Giữ lưu lượng trong mạng riêng bằng VPC interface endpoint (AWS PrivateLink); mã hóa bằng AWS KMS; kiểm toán bằng AWS CloudTrail và model invocation logging.
+- Token quyết định hóa đơn: theo dõi token vào/ra trên Amazon CloudWatch, đặt AWS Budgets, giới hạn token đầu ra và giao việc đơn giản cho model nhỏ hơn.
 
-### Những Gì Học Được
+#### 8. Các nhóm trình bày kiến trúc
 
-#### Tư Duy Thiết Kế
+- Các nhóm thực tập trình bày kiến trúc AWS của dự án. Nhiều thiết kế chạy agent viết bằng Strands Agents trên Amazon ECS với Fargate trong subnet private, image lưu ở Amazon ECR, phía trước là Application Load Balancer, kèm công cụ theo dõi như Langfuse.
+- Sau mỗi phần trình bày là hỏi đáp về luồng dữ liệu, bảo mật và chi phí của thiết kế, giúp em thấy người chấm quan tâm điều gì ở một sơ đồ kiến trúc.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+### Những gì học được
 
-#### Kiến Trúc Kỹ Thuật
+- **Bắt đầu từ model card:** Region và kiểu inference quyết định dùng được model nào và IAM phải viết thế nào.
+- **Neo câu trả lời vào dữ liệu, không vào trí nhớ của model:** Knowledge Bases có bộ lọc metadata, cộng với bước kiểm tra trích dẫn có thật.
+- **Guardrails là một lớp, không phải toàn bộ phòng thủ:** kết hợp với thu thập tối thiểu dữ liệu, kiểm tra đầu ra và quyền tối thiểu.
+- **Tính chi phí ngay từ đầu:** token là biến phí chính; caching và giới hạn đầu ra rất quan trọng.
+- **Ưu tiên điều phối tất định cho việc nhạy cảm:** workflow quyết định thứ tự bước, model chỉ đọc và viết.
+- **Giải thích được từng mũi tên trên sơ đồ:** sơ đồ tốt kể đường đi của dữ liệu từng bước và thể hiện rõ ranh giới bảo mật.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+### Ứng dụng vào công việc
 
-#### Chiến Lược Hiện Đại Hóa
+Kiến thức từ buổi chia sẻ được đưa thẳng vào dự án SCA ([5. Workshop]({{< relref "/5-Workshop" >}})):
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+| Học được tại sự kiện | Áp dụng trong SCA |
+| --- | --- |
+| Model card và cross-Region inference profile | Amazon Nova Pro qua profile APAC `apac.amazon.nova-pro-v1:0` tại Singapore, IAM cấp quyền cả ARN profile lẫn foundation model |
+| Converse API và tool use | Sáu agent chỉ trả kết quả qua công cụ ghi JSON; code kiểm tra schema và yêu cầu sửa khi sai |
+| Prompt caching | 57% token đầu vào đọc từ cache trong lượt chạy thật |
+| Knowledge Bases, S3 Vectors và bộ lọc metadata | Kho luật lưu theo từng điều, lọc theo quốc gia và trạng thái hiệu lực; mỗi trích dẫn được tìm lại trước khi vào báo cáo |
+| Guardrails | Quét dữ liệu cá nhân và kiểm tra rò rỉ trước khi agent chạy; bộ lọc prompt attack cho lời gọi model |
+| Agent hay workflow | AWS Step Functions điều phối sáu agent theo thứ tự cố định |
+| Bảo mật và chi phí | Subnet private với VPC endpoint, khóa KMS, AWS Budgets và dashboard CloudWatch có chi phí mỗi hợp đồng |
 
-### Ứng Dụng Vào Công Việc
+### Trải nghiệm trong sự kiện
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+#### Học hỏi từ các mentor
 
-### Trải nghiệm trong event
+Các mentor gắn từng tính năng của Bedrock với một quyết định thiết kế cụ thể, nhờ đó em dễ thấy khi nào nên dùng Knowledge Bases, khi nào cần thêm Guardrails và khi nào một workflow an toàn hơn agent.
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+#### Xem kiến trúc của các nhóm khác
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+Nghe các nhóm khác trình bày và trả lời câu hỏi giúp em thấy nhiều cách giải cùng một bài toán, như chạy agent trên container hay trên hàm serverless, và người chấm chú ý thế nào đến ranh giới bảo mật và chi phí.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+#### Gặp gỡ cả khóa
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+Buổi chia sẻ tập trung cả khóa trong một phòng, tạo cơ hội trao đổi ý tưởng, so sánh cách làm và làm quen với các nhóm khác.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+- Kiểm tra quyền model, Region và quota trước khi thiết kế xoay quanh một model.
+- Giữ tri thức pháp lý hay nghiệp vụ ở ngoài model và kiểm chứng những gì model trích dẫn.
+- Sẵn sàng giải thích từng bước của kiến trúc, kể cả chuyện gì xảy ra khi có lỗi.
+
+### Hình ảnh sự kiện
+
+![Ảnh chụp chung của khóa FCAJ tại buổi chia sẻ Amazon Bedrock, văn phòng AWS](/images/4-EventParticipated/bedrock-event-group-photo.jpg)
+
+*Khóa FCAJ tại buổi chia sẻ về Amazon Bedrock, 14/11/2026.*
+
+![Một nhóm thực tập trả lời câu hỏi về kiến trúc AWS của nhóm](/images/4-EventParticipated/bedrock-event-architecture-qa.jpg)
+
+*Hỏi đáp sau phần trình bày kiến trúc AWS của một nhóm.*
+
+![Thực tập sinh trình bày kiến trúc AWS với Strands Agents trên Amazon ECS](/images/4-EventParticipated/bedrock-event-architecture-presentation.jpg)
+
+*Một nhóm trình bày kiến trúc AWS của dự án.*
+
+![Thực tập sinh trong phòng sự kiện](/images/4-EventParticipated/bedrock-event-in-session.jpg)
+
+*Trong phòng sự kiện.*
+
+> Nhìn chung, buổi chia sẻ cho em cả kiến thức về Amazon Bedrock lẫn thói quen thiết kế cần thiết để biến ý tưởng SCA thành một hệ thống chạy thật trên AWS.

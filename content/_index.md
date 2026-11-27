@@ -19,7 +19,7 @@ chapter: false
 
 &emsp; **Major:** <Major>Cybersecurity
 
-&emsp; **Class:** <FCAJ class code>
+&emsp; **Class:** <FCAJ class code>FCAJ - FPT - Season 4
 
 &emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
 
