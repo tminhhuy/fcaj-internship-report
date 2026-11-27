@@ -17,4 +17,3 @@ Giới thiệu các thành phần cốt lõi của Amazon VPC: subnet public/pri
 ### [Blog 3 - Top 16 dịch vụ AWS mà kỹ sư nên biết](3.3-blog3/)
 Tổng hợp 16 dịch vụ AWS quan trọng theo vai trò trong kiến trúc hệ thống: tính toán, dữ liệu, tích hợp ứng dụng, mạng và bảo mật/vận hành, cùng hướng tích hợp AI với Amazon Bedrock.
 
-Nguồn : https://www.facebook.com/groups/awsstudygroupfcj/permalink/2326006894830936/?rdid=dndxkWjCrAPSt9rI&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1FXDe3eHC5%2F# 
