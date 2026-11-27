@@ -108,8 +108,8 @@ The platform is fully serverless and event-driven. The five functions that read 
 
 | Date | Milestone |
 | --- | --- |
-| 30/10/2026 | Topic chosen: an AI agent that checks, scores and summarizes B2B/B2C contracts |
-| 09/11 – 13/11/2026 | Requirements; OCR and personal data masking experiments (Textract, Comprehend, regex, Guardrails) |
+| 06/11/2026 | Topic chosen: an AI agent that checks, scores and summarizes B2B/B2C contracts |
+| 09/11 – 20/11/2026 | Requirements; OCR and personal data masking experiments (Textract, Comprehend, regex, Guardrails) |
 | 14/11/2026 | Amazon Bedrock sharing session with the FCAJ mentors |
 | 16/11 – 22/11/2026 | Architecture design, legal research framework, cost estimate, proposal |
 | 20/11 – 24/11/2026 | Bedrock access blocked on the first account; switched to a team member's account and to Amazon Nova Pro |

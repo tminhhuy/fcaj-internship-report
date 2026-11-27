@@ -108,8 +108,8 @@ Nền tảng hoàn toàn serverless và hướng sự kiện. Năm hàm đọc n
 
 | Thời gian | Mốc |
 | --- | --- |
-| 30/10/2026 | Chốt đề tài: AI agent kiểm tra, chấm điểm và tóm tắt hợp đồng B2B/B2C |
-| 09/11 – 13/11/2026 | Xác định yêu cầu; thử nghiệm OCR và che dữ liệu cá nhân (Textract, Comprehend, regex, Guardrails) |
+| 06/11/2026 | Chốt đề tài: AI agent kiểm tra, chấm điểm và tóm tắt hợp đồng B2B/B2C |
+| 09/11 – 20/11/2026 | Xác định yêu cầu; thử nghiệm OCR và che dữ liệu cá nhân (Textract, Comprehend, regex, Guardrails) |
 | 14/11/2026 | Buổi chia sẻ về Amazon Bedrock cùng các mentor FCAJ |
 | 16/11 – 22/11/2026 | Thiết kế kiến trúc, khung nghiên cứu pháp lý, dự toán chi phí, bản đề xuất |
 | 20/11 – 24/11/2026 | Tài khoản đầu tiên bị chặn quyền Bedrock; chuyển sang tài khoản của thành viên nhóm và Amazon Nova Pro |
